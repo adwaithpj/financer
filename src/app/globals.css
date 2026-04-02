@@ -1,21 +1,56 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@source '../../node_modules/@cloudflare/kumo/dist/**/*.{js,jsx,ts,tsx}';
+@source '../../src/**/*.{js,jsx,ts,tsx,mdx}';
+@import '@cloudflare/kumo/styles/tailwind';
+@import 'tailwindcss';
+@config '../../tailwind.config.ts';
+
+/* Tailwind v4 defaults `dark:` to prefers-color-scheme; override so JS toggle + data-mode work */
+@custom-variant dark (&:where(.dark, .dark *, [data-mode='dark'], [data-mode='dark'] *));
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --sidebar-w: 256px;
+  --sidebar-w-collapsed: 64px;
+  --sidebar-width: var(--sidebar-w);
+  --sidebar-collapsed: var(--sidebar-w-collapsed);
+  --sidebar-transition: 260ms cubic-bezier(0.4, 0, 0.2, 1);
+  --topbar-h: 56px;
+  /* Space above the chart/transactions row (header + stat cards + gaps); tune if layout shifts */
+  --home-second-offset: 13rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.dark,
+html[data-mode='dark'] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-my-font);
+}
+
+@layer components {
+  /* app shell */
+  .app-layout {
+    @apply flex min-h-screen;
+  }
+
+  .main-area {
+    margin-left: 0;
+    padding-top: 3.5rem; /* mobile top bar height */
+    @apply min-h-screen flex-1 transition-[margin] duration-300;
+  }
+
+  @media (min-width: 1024px) {
+    .main-area {
+      margin-left: var(--sidebar-width);
+      padding-top: 0;
+    }
+    .main-area.collapsed {
+      margin-left: var(--sidebar-collapsed);
+    }
+  }
 }
