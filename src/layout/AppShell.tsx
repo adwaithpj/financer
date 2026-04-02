@@ -68,7 +68,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <SidebarNav />
 
           <main className="flex min-h-0 flex-1 flex-col" id="main-area">
-            <div className="mx-auto flex min-h-0 w-full flex-1 flex-col px-4 py-4 sm:px-8 sm:py-4 lg:px-16 lg:pb-2 lg:pt-10">
+            <div className="max-lg:pt-23 mx-auto flex min-h-0 w-full flex-1 flex-col px-4 py-4 sm:px-8 sm:py-4 lg:px-16 lg:pb-2 lg:pt-10">
               {children}
             </div>
           </main>

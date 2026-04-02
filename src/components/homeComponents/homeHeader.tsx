@@ -21,7 +21,7 @@ export function HomeHeader() {
 
   return (
     <>
-      <h1 className="text-4xl font-bold">
+      <h1 className="text-4xl font-bold max-lg:text-2xl">
         {welcomeMessage}, {name} 👋
       </h1>
       <p className="text-sm text-zinc-500">
@@ -29,7 +29,7 @@ export function HomeHeader() {
       </p>
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
-          <h2 className="text-lg font-bold">Overview</h2>
+          <h2 className="text-lg font-bold max-lg:text-base">Overview</h2>
         </div>
       </div>
     </>
