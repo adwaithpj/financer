@@ -50,8 +50,7 @@ const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
               {entry.name}:
             </span>
             <span className="text-neutral-600 dark:text-neutral-300">
-              $
-              {Number(entry.value ?? 0).toLocaleString()}
+              ${Number(entry.value ?? 0).toLocaleString()}
             </span>
           </div>
         ))}
@@ -68,8 +67,8 @@ type BalanceChartProps = {
 
 export function BalanceChart({ data }: BalanceChartProps) {
   return (
-    <div className="h-[400px] w-full">
-      <ResponsiveContainer width="100%" height="100%">
+    <div className="h-[400px] min-h-[400px] w-full min-w-0">
+      <ResponsiveContainer width="100%" height={360}>
         <AreaChart
           data={data ?? fallbackData}
           margin={{

@@ -39,7 +39,7 @@ export function SidebarNav({
 
   return (
     <aside
-      className={`flex h-screen flex-shrink-0 flex-col border-r border-neutral-200 bg-white text-black transition-transform duration-300 ease-out max-lg:fixed max-lg:inset-y-0 max-lg:left-0 max-lg:z-50 max-lg:shadow-xl lg:static lg:z-auto lg:translate-x-0 lg:shadow-none dark:border-neutral-800 dark:bg-[#111111] dark:text-white ${
+      className={`flex h-screen min-h-0 flex-shrink-0 flex-col overflow-hidden border-r border-neutral-200 bg-white text-black transition-transform duration-300 ease-out max-lg:fixed max-lg:inset-y-0 max-lg:left-0 max-lg:z-50 max-lg:shadow-xl lg:static lg:z-auto lg:translate-x-0 lg:shadow-none dark:border-neutral-800 dark:bg-[#111111] dark:text-white ${
         collapsed ? 'w-80 lg:w-24' : 'w-80'
       } ${mobileNavOpen ? 'max-lg:translate-x-0' : 'max-lg:-translate-x-full'}`}
     >

@@ -28,7 +28,10 @@ export default function RootLayout({
           content="width=device-width, intial-class=1, maximum-scale=1, user-scalable=no"
         />
       </head>
-      <body className={`${myFont.variable} antialiased`}>
+      <body
+        className={`${myFont.variable} antialiased`}
+        suppressHydrationWarning
+      >
         <KumoRoot>
           <AppShell>{children}</AppShell>
         </KumoRoot>

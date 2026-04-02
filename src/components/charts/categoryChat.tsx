@@ -46,8 +46,8 @@ export function CategoryChart({ data }: CategoryChartProps) {
       className="ring-kumo-line rounded-none p-4 ring-1 md:p-6"
     >
       <Text variant="heading3">Spending by category</Text>
-      <div className="mt-4 h-[260px] w-full min-w-0">
-        <ResponsiveContainer width="100%" height="100%">
+      <div className="mt-4 h-[260px] min-h-[260px] w-full min-w-0">
+        <ResponsiveContainer width="100%" height={260}>
           <PieChart>
             <Pie
               data={data}

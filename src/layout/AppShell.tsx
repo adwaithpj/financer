@@ -40,7 +40,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </div>
       ) : (
         <div className="app-layout flex h-screen min-h-0 w-full flex-col bg-gray-50 text-black transition-colors duration-300 lg:flex-row dark:bg-[#0a0a0a] dark:text-white">
-          <header className="flex h-14 shrink-0 items-center gap-3 border-b border-neutral-200 bg-white px-4 lg:hidden dark:border-neutral-800 dark:bg-[#111111]">
+          <header className="h-21 fixed left-0 right-0 top-0 z-50 flex shrink-0 items-center gap-3 border-b border-neutral-200 bg-white px-4 lg:hidden dark:border-neutral-800 dark:bg-[#111111]">
             <Button
               type="button"
               variant="ghost"

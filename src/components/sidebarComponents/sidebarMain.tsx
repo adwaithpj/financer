@@ -50,7 +50,7 @@ export function SidebarMain({
   }
 
   return (
-    <nav className="flex flex-1 flex-col">
+    <nav className="flex min-h-0 flex-1 flex-col overflow-y-auto overflow-x-hidden">
       {NAV_LINKS.map((link) => {
         const isActive = currentSection === link.id;
         return (
