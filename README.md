@@ -11,7 +11,7 @@ Financer is a **Next.js** personal finance dashboard: enter your name on the lan
 | Framework        | [Next.js](https://nextjs.org) 15 (App Router), React 19                                                                                        |
 | Language         | TypeScript                                                                                                                                     |
 | Styling          | [Tailwind CSS](https://tailwindcss.com) v4 (`@tailwindcss/postcss`)                                                                            |
-| UI primitives    | [Cloudflare Kumo](https://developers.cloudflare.com/kumo/) — `Button`, `Input`, `Surface`, `Text`, `TooltipProvider`, etc.                     |
+| UI primitives    | [Cloudflare Kumo](https://kumo-ui.com/) — `Button`, `Input`, `Surface`, `Text`, `TooltipProvider`, etc.                     |
 | Icons            | [@phosphor-icons/react](https://phosphoricons.com/)                                                                                            |
 | Charts           | [Recharts](https://recharts.org) (area, pie), [Chart.js](https://www.chartjs.org/) + [react-chartjs-2](https://react-chartjs-2.js.org/) (line) |
 | State            | [Zustand](https://zustand-demo.pmnd.rs/) with `persist` middleware                                                                             |
